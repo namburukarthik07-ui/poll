@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Enter Poll Options</h2>
+
+    <form method="POST">
+        {% for i in range(count) %}
+            <label>Option {{ i+1 }}:</label>
+            <input type="text" name="option{{ i }}" required>
+        {% endfor %}
+
+        <button type="submit">Create Poll</button>
+    </form>
+</div>
+
+</body>
+</html>

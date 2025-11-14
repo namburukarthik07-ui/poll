@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Poll Results</h2>
+
+    <h3>{{ poll_data.question }}</h3>
+
+    {% for option in poll_data.options %}
+        <div class="result-card">
+            <strong>{{ option }}</strong> — {{ poll_data.votes[loop.index0] }} votes
+        </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

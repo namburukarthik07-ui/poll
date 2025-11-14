@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Create a Poll</h2>
+
+    <form method="POST">
+        <label>Enter Poll Question:</label>
+        <input type="text" name="question" required>
+
+        <label>Number of Options:</label>
+        <input type="number" name="option_count" min="2" required>
+
+        <button type="submit">Next</button>
+    </form>
+</div>
+
+</body>
+</html>

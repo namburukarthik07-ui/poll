@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>{{ poll_data.question }}</h2>
+
+    <form method="POST">
+        {% for option in poll_data.options %}
+        <div class="option-box">
+            <input type="radio" name="vote" value="{{ loop.index0 }}" required>
+            {{ option }}
+        </div>
+        {% endfor %}
+        <button type="submit">Vote</button>
+    </form>
+</div>
+
+</body>
+</html>
